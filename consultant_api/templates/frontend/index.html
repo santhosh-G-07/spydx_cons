@@ -1,0 +1,371 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}">
+    <title>spydX</title>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-dark navbar-expand-lg" uk-sticky="top:100; animation: uk-animation-slide-top">
+    <div class="container">
+        <a href="{% url 'index' %}" class="navbar-brand d-flex align-items-center">
+            <img src="{% static 'img/logo.png' %}" class="img-fluid" style="width: 15%; filter: brightness(1) invert(0);">
+            <span class="ml-2 webT"></span>
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navBar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav ml-auto">
+                <!-- Home -->
+                <li class="nav-item {% if request.resolver_match.url_name == 'index' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <!-- About -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <!-- Services -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <!-- Projects -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+
+                <!-- SpydX ATS -->
+                <!-- <li class="nav-item">
+                    <a class="btn btn-warning ml-3 text-dark font-weight-bold" href="{% url 'consultant_ats_upload' %}">
+                        🚀 SpydX ATS
+                    </a>
+                </li> -->
+
+                <!-- Auth Buttons -->
+                <!-- {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="btn btn-success ml-3" href="{% url 'consultant_dashboard' %}">Dashboard</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="btn btn-primary ml-3" href="{% url 'consultant_login' %}">Login</a>
+                    </li>
+                {% endif %} -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+
+
+
+    <!-- Slider Section Start -->
+<section id="slider" class="bg-dark"> 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item crs-img-1 active">
+                <div class="container">
+                    <div class="carousel-caption pb-5 mb-5 text-left">
+                        <h2 class="display-4 text-light">SpydX</h2>
+                        <p class="lead">
+                            Pioneering next-gen tech solutions with a fusion of AI, automation, and seamless design for the future of business.
+                        </p>
+                        <a href="#info" class="btn btn-success">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item crs-img-2">
+                <div class="container">
+                    <div class="carousel-caption mb-5 text-center">
+                        <h2 class="display-4 text-light">Smart. Scalable. SpydX.</h2>
+                        <p>
+                            Custom software, smart automation, and intuitive platforms tailored to elevate your brand's digital presence.
+                        </p>
+                        <a href="#showcase" class="btn btn-warning">What We Do</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item crs-img-3">
+                <div class="container">
+                    <div class="carousel-caption pb-5 mb-5 text-right">
+                        <h2 class="display-4 text-light">Driven By Innovation</h2>
+                        <p>
+                            We engineer digital ecosystems with precision, performance, and purpose to power your next breakthrough.
+                        </p>
+                        <a href="#get-started" class="btn btn-info">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item crs-img-4">
+                <div class="container">
+                    <div class="carousel-caption pb-5 mb-5 text-left">
+                        <h2 class="display-4 text-light">Your Tech Ally</h2>
+                        <p>
+                            Partner with SpydX for smart systems, secure solutions, and strategies that scale with your vision.
+                        </p>
+                        <a href="{% url 'contact' %}" class="btn btn-success">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#myCarousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>      
+</section>
+<!-- Slider Section End -->
+
+<!-- Showcase Section Start -->
+<section id="showcase">
+    <div class="container">
+        <div class="row py-5 text-center">
+            <div class="col-lg-4 col-md-4">
+                <i class="fas fa-cogs mb-3"></i>
+                <h3>Intelligent Automation</h3>
+                <p class="lead mt-2">We build smart systems that automate tasks, reduce costs, and supercharge productivity for modern businesses.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <i class="fas fa-cloud mb-3"></i>
+                <h3>Cloud-Driven Solutions</h3>
+                <p class="lead mt-2">From scalable cloud apps to robust APIs — we architect platforms built to grow with your business, securely and seamlessly.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <i class="fas fa-cart-plus mb-3"></i>
+                <h3>Digital Commerce</h3>
+                <p class="lead mt-2">Empowering online businesses with cutting-edge eCommerce tools, integrated payments, and real-time insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Showcase Section End -->
+
+<!-- Get Started Section Start -->
+<section id="get-started" class="text-center py-5 text-light">
+    <div class="inner-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5 pt-4 gC">
+                    <h3 class="text-light">Let’s Build Something Great Together</h3>
+                    <p class="lead">
+                        At SpydX, we don’t just deliver code. We craft experiences, engineer performance, and empower digital transformation. Ready to kickstart your journey?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Get Started Section End -->
+<!-- Info Section Start -->
+<section id="info" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 justify-content-center text-left infoS">
+                <h3>Why Choose SpydX?</h3>
+                <p class="lead">
+                    We blend innovation with reliability. From startup prototypes to enterprise-grade platforms, SpydX is your trusted partner for smart, scalable, and secure tech solutions.
+                </p>
+                <a href="#contact" class="btn btn-outline-dark">Let’s Talk</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 align-self-center">
+                <img src="{% static 'img/info.jpg' %}" class="img-fluid" alt="SpydX info section image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Info Section End -->
+
+<!-- Video Section Start -->
+<section id="video" class="text-center text-light">
+    <div class="video-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5 pt-4">
+                    <div uk-lightbox>
+                        <a href="https://youtu.be/uVqv7vIKOwM">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <h2 class=" mt-5 text-light">Hack The Planet</h2>
+                    <p class="lead">Click Play Button To See</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Video Section End -->
+
+<!-- Tech Stack Section Start -->
+<section id="techstack" class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h2 class="mb-0">Our Tech Stack</h2>
+                <p class="lead m-0">We build with the latest and greatest tools in the industry</p>
+            </div>
+        </div>
+
+        <div class="row mt-5 text-center">
+            <!-- Row 1 -->
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/aws.png' %}" alt="AWS" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">AWS</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/python.png' %}" alt="Python" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Python</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/javascript.png' %}" alt="JavaScript" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">JavaScript</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/typescript.png' %}" alt="TypeScript" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">TypeScript</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/reactjs.png' %}" alt="ReactJS" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">ReactJS</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/redux.png' %}" alt="Redux" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Redux</p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/nodejs.png' %}" alt="Node.js" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Node.js</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/express.png' %}" alt="Express" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Express</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/mongodb.png' %}" alt="MongoDB" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">MongoDB</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/postgresql.png' %}" alt="PostgreSQL" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">PostgreSQL</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/mysql.png' %}" alt="MySQL" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">MySQL</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/docker.png' %}" alt="Docker" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Docker</p>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/tailwind.png' %}" alt="Tailwind" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Tailwind</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/mui.png' %}" alt="MUI" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">MUI</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/figma.png' %}" alt="Figma" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Figma</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/framer.png' %}" alt="Framer" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">Framer</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/overleaf.webp' %}" alt="OverLeaf" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">OverLeaf</p>
+            </div>
+            <div class="col-6 col-md-2 mb-4">
+                <img src="{% static 'img/gsap.png' %}" alt="GSAP" class="img-fluid" style="height:60px;">
+                <p class="mt-2 small">GSAP</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Tech Stack Section End -->
+
+<!-- Newsletter Signup Section Start -->
+<section id="subscribe" class="text-center py-5 bg-dark text-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-light">Stay In The Loop With SpydX</h2>
+                <p class="lead">
+                    Get updates, insights, and insider news directly from our team. No spam, just the good stuff.
+                </p>
+                <form class="form-inline justify-content-center" action="mailto:contact@thespydx.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" class="form-control m-2" required>
+                    <input type="email" name="email" placeholder="Your Email" class="form-control m-2" required>
+                    <input type="submit" value="Subscribe" class="btn btn-primary m-2">
+                </form>
+                <small class="d-block mt-2">We'll never share your email with anyone else.</small>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Newsletter Signup Section End -->
+
+<!-- Footer Section Start -->
+<footer id="footer" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-3 text-success">spydX</h2>
+        <p class="lead">Innovating your future with AI-powered solutions.</p>
+        
+        <!-- Social Media Links -->
+        <div class="d-flex justify-content-center my-4">
+            <a href="https://www.facebook.com/profile.php?id=61578774855523" class="text-light px-3 fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/107144620" class="text-light px-3 fs-4"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/spydX_" class="text-light px-3 fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/spydx_tech/" class="text-light px-3 fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/santhosh-G-07" class="text-light px-3 fs-4"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mb-3">
+            <a href="{% url 'index' %}" class="text-light text-decoration-none mx-2">Home</a> |
+            <a href="{% url 'about' %}" class="text-light text-decoration-none mx-2">About</a> |
+            <a href="{% url 'services' %}" class="text-light text-decoration-none mx-2">Services</a> |
+            <a href="{% url 'projects' %}" class="text-light text-decoration-none mx-2">Projects</a> |
+            <a href="{% url 'contact' %}" class="text-light text-decoration-none mx-2">Contact</a>
+        </div>
+
+        <!-- Footer Note -->
+        <p class="small text-muted mb-0">© 2025 <span class="text-success">thespydx.com</span> — All rights reserved.</p>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="{% static 'js/jquery-slim.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit-icons.min.js' %}"></script>
+</body>
+</html>
+

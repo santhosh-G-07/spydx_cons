@@ -1,0 +1,553 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>spydX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/uikit.min.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome/css/all.css' %}">
+</head>
+<body>
+
+<!-- Navbar Section Start -->
+<nav class="navbar navbar-dark navbar-expand-lg" uk-sticky="top:100; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up">
+    <div class="container">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo1.png' %}" class="img-fluid p-0" style="width: 35%; filter: brightness(0) invert(1);">
+            <div class="ml-2 p-0 d-inline webT">spydX</div>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#navBar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Nav Section End -->
+
+<!-- Services Section Start -->
+<section id="services" class="text-center py-5 text-light">
+    <div class="inner-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5 pt-4">
+                    <h1 class="text-light">Our Services</h1>
+                    <p class="lead">
+                        At SpydX, we craft digital solutions that speak your brand’s voice. From building sleek websites to smart AI integrations and standout resumes, we handle it all with precision and passion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Services Table Section Start -->
+<section id="services-table" class="py-5 text-center" style="background:linear-gradient(135deg,#e7f5ff 0%,#eaf7ea 100%);color:#212529;">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <span class="display-4 fw-bold" style="color:#258a4c;">
+                    <i class="fas fa-code"></i> Web Development
+                </span>
+                <p class="lead mt-2" style="color:#5a5a5a;">Tailored solutions for modern brands. Choose your style, we'll build the rest.</p>
+            </div>
+        </div>
+        <div class="row my-5">
+            <!-- Portfolio Website -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#f9fff9;">
+                    <div class="card-header" style="background:#258a4c;color:#fff;">
+                        <h2 class="m-0">Portfolio Website</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#258a4c;">Starts from ₹999</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">Perfect for students, freelancers, or anyone who wants an elegant personal brand online.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#f9fff9;">Responsive Single Page</li>
+                            <li class="list-group-item" style="background:#f9fff9;">LinkedIn, Resume, Projects</li>
+                            <li class="list-group-item" style="background:#f9fff9;">SEO Optimized</li>
+                            <li class="list-group-item" style="background:#f9fff9;">Fast Delivery</li>
+                        </ul>
+                        <a href="#" class="btn btn-success btn-block mt-3" style="background:#258a4c;border:none;">Get Started</a>
+                    </div>
+                    <div class="card-footer" style="background:#e7f5ff;">
+                        <h5 class="m-0 text-secondary">Basic Package</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Static Website -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#f4faff;">
+                    <div class="card-header" style="background:#3273dc;color:#fff;">
+                        <h2 class="m-0">Static Website</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#3273dc;">Starts from ₹5999</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">For small businesses or professionals needing a crisp, clean online presence.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#f4faff;">Up to 5 Pages</li>
+                            <li class="list-group-item" style="background:#f4faff;">Contact Form Integration</li>
+                            <li class="list-group-item" style="background:#f4faff;">Hosting Guidance</li>
+                            <li class="list-group-item" style="background:#f4faff;">Clean UI Design</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block mt-3" style="background:#3273dc;border:none;">Book Now</a>
+                    </div>
+                    <div class="card-footer" style="background:#eaf7ea;">
+                        <h5 class="m-0 text-secondary">Essential Package</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Website -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#f5f5fa;">
+                    <div class="card-header" style="background:#222733;color:#fff;">
+                        <h2 class="m-0">Dynamic Website</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#31374e;">Starts from ₹9999</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">Feature-rich web apps with admin panels, databases, and dynamic content. Built for growth.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#f5f5fa;">Login System + Admin Panel</li>
+                            <li class="list-group-item" style="background:#f5f5fa;">Database Integration (MySQL/Firebase)</li>
+                            <li class="list-group-item" style="background:#f5f5fa;">Custom CMS Options</li>
+                            <li class="list-group-item" style="background:#f5f5fa;">Real-time Data & Forms</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark btn-block mt-3" style="background:#222733;border:none;">Let's Build</a>
+                    </div>
+                    <div class="card-footer" style="background:#e7f5ff;">
+                        <h5 class="m-0 text-secondary">Premium Package</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Table Section End -->
+
+<!-- Services Table Section: Machine Learning Start -->
+<section id="services-ml" class="py-5 text-center" style="background:linear-gradient(135deg,#23272a 0%,#3f4a5a 100%);color:#fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <span class="display-4 fw-bold" style="color:#feb60a;">
+                    <i class="fas fa-robot"></i> Machine Learning Services
+                </span>
+                <p class="lead mt-2" style="color:#e8e8e8;">Custom AI solutions built for real-world impact. From chatbots to complex models, we’ve got your back.</p>
+            </div>
+        </div>
+        <div class="row my-5">
+            <!-- Chatbot Development -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#383838;color:#fff;">
+                    <div class="card-header" style="background:#feb60a;color:#222733;">
+                        <h2 class="m-0">Chatbot Integration</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#feb60a;">Starts from ₹1999</h3>
+                        <p class="card-text lead" style="color:#e8e8e8;">Smart assistants trained on your data. Website, WhatsApp, or custom platform support.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#383838;color:#fff;">NLP-powered conversation</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">FAQ or Data-driven Chat</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Website/WhatsApp Embed</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Custom UI/UX Support</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning btn-block mt-3" style="color:#222733;background:#feb60a;border:none;">Launch Bot</a>
+                    </div>
+                    <div class="card-footer" style="background:#23272a;">
+                        <h5 class="m-0 text-secondary">Starter AI Bot</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Detection Models -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#383838;color:#fff;">
+                    <div class="card-header" style="background:#ff3444;color:#fff;">
+                        <h2 class="m-0">Detection Models</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#ff3444;">Starts from ₹4999</h3>
+                        <p class="card-text lead" style="color:#e8e8e8;">Smart vision & audio models for object detection, emotion tracking, and more.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Object & Face Detection</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Gesture & Emotion Tracking</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">OpenCV / YOLO / TensorFlow</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Live Camera Feed Processing</li>
+                        </ul>
+                        <a href="#" class="btn btn-danger btn-block mt-3" style="background:#ff3444;border:none;">Detect Now</a>
+                    </div>
+                    <div class="card-footer" style="background:#23272a;">
+                        <h5 class="m-0 text-secondary">Vision AI</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Custom AI Models -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#383838;color:#fff;">
+                    <div class="card-header" style="background:#4fa4f4;color:#222733;">
+                        <h2 class="m-0">Custom AI Models</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#4fa4f4;">Starts from ₹7999</h3>
+                        <p class="card-text lead" style="color:#e8e8e8;">Predictive analytics, recommendation systems, fraud detection — full-stack ML Projects.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Scikit-learn / TensorFlow / PyTorch</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Classification & Regression Models</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">End-to-end ML Pipelines</li>
+                            <li class="list-group-item" style="background:#383838;color:#fff;">Cloud or Local Deployment</li>
+                        </ul>
+                        <a href="#" class="btn btn-info btn-block mt-3" style="color:#222733;background:#4fa4f4;border:none;">Let's Train</a>
+                    </div>
+                    <div class="card-footer" style="background:#23272a;">
+                        <h5 class="m-0 text-secondary">Custom ML Project</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Table Section: Machine Learning End -->
+<!-- Services Table Section: Resume Services Start -->
+<!-- Services Table Section: Resume Services Start -->
+<section id="services-resume" class="py-5 text-center" style="background:linear-gradient(135deg,#e7f5ff 0%,#eaf7ea 100%);color:#212529;">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <span class="display-4 fw-bold" style="color:#49c2ff;">
+                    <i class="fas fa-file-alt"></i> Resume Services
+                </span>
+                <p class="lead mt-2" style="color:#5a5a5a;">
+                    Professional, clean, and standout resumes designed to get you hired. Built for every stage of your career.
+                </p>
+            </div>
+        </div>
+        <div class="row my-5">
+            <!-- Fresher Resume (White Card) -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#fff;color:#23272a;">
+                    <div class="card-header" style="background:#49c2ff;color:#23272a;">
+                        <h2 class="m-0">Fresher Resume</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#49c2ff;">Starts from ₹399</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">
+                            Kickstart your career with a resume that highlights your strengths, skills, and academic journey.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">One-page clean design</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">ATS-compatible layout</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Custom fonts & sections</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Editable format included</li>
+                        </ul>
+                        <a href="#" class="btn btn-info btn-block mt-3" style="color:#23272a;background:#49c2ff;border:none;">Get Started</a>
+                    </div>
+                    <div class="card-footer" style="background:#e7f5ff;">
+                        <h5 class="m-0 text-secondary">For Fresh Graduates</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Professional Resume (White Card) -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#fff;color:#23272a;">
+                    <div class="card-header" style="background:#feb60a;color:#23272a;">
+                        <h2 class="m-0">Professional Resume</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#feb60a;">Starts from ₹599</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">
+                            Built for working professionals aiming to climb the ladder or switch careers. Show your expertise.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">2-page executive layout</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Skill-based & role-centric</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Optional cover letter</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Delivered in 48 hours</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning btn-block mt-3" style="color:#23272a;background:#feb60a;border:none;">Upgrade Now</a>
+                    </div>
+                    <div class="card-footer" style="background:#eaf7ea;">
+                        <h5 class="m-0 text-secondary">For Experienced Professionals</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- US Standard Resume (White Card) -->
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card border-0 shadow h-100" style="background:#fff;color:#23272a;">
+                    <div class="card-header" style="background:#ff3444;color:#fff;">
+                        <h2 class="m-0">US Standard Resume</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title" style="color:#ff3444;">Starts from ₹899</h3>
+                        <p class="card-text lead" style="color:#5a5a5a;">
+                            Crafted as per international formatting and hiring standards — stand out globally.
+                        </p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">US/Canada format compliance</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">LinkedIn profile optimization</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">Section-wise keyword strategy</li>
+                            <li class="list-group-item" style="background:#fff;color:#23272a;">PDF + Word + Canva delivery</li>
+                        </ul>
+                        <a href="#" class="btn btn-danger btn-block mt-3" style="background:#ff3444;border:none;">Make it Global</a>
+                    </div>
+                    <div class="card-footer" style="background:#e7f5ff;">
+                        <h5 class="m-0 text-secondary">For International Roles</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services Table Section: Resume Services End -->
+
+
+
+<!-- Services FAQ Section Start (SPYDX Style) -->
+<section id="services-faq" class="py-5 bg-dark">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <h2 class="text-light text-center">Frequently Asked at SPYDX</h2>
+                <p class="text-muted text-center">We get it — you’ve got questions. Here’s everything you need to know before working with us.</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-lg-4 col-sm-4">
+                <div id="accordion" role="tablist">
+                    <!-- FAQ 1 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div data-toggle="collapse" href="#f1">
+                                    Do you offer custom web development?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion" id="f1">
+                            <div class="card-body">
+                                <p>
+                                    Yep. From static portfolio sites to dynamic full-stack web apps, we build it all. Clean code, responsive UI, SEO-optimized — tailor-made for your brand.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f2" data-toggle="collapse">
+                                    How long does a resume take to deliver?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion" id="f2">
+                            <div class="card-body">
+                                <p>
+                                    Standard delivery is 24–48 hours. Urgent? Ping us — we’ve got express options. PDF, Word, and even Canva formats included.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f3" data-toggle="collapse">
+                                    Is your chatbot integration plug-and-play?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion" id="f3">
+                            <div class="card-body">
+                                <p>
+                                    Absolutely. We support site embedding, WhatsApp, and even Telegram bots — trained on your content, branded for your audience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-4 col-sm-4">
+                <div id="accordion2" role="tablist">
+                    <!-- FAQ 4 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div data-toggle="collapse" href="#f4">
+                                    Can I get revisions on resumes?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion2" id="f4">
+                            <div class="card-body">
+                                <p>
+                                    Yes! We offer up to 2 free revisions within 3 days of delivery. We don’t stop until you’re confident to hit “Apply Now.”
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f5" data-toggle="collapse">
+                                    What tech stacks do you use for web Projects?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion2" id="f5">
+                            <div class="card-body">
+                                <p>
+                                    React, Node.js, Flask, Firebase, Bootstrap, Tailwind — we pick the right stack for your need. No bloated code. Only what works.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f6" data-toggle="collapse">
+                                    Do you offer AI-based project help or custom ML models?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion2" id="f6">
+                            <div class="card-body">
+                                <p>
+                                    We do! From object detection and sentiment analysis to college Projects and client-grade ML models — we’ve got you covered end-to-end.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-4 col-sm-4">
+                <div id="accordion3" role="tablist">
+                    <!-- FAQ 7 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div data-toggle="collapse" href="#f7">
+                                    Can SPYDX handle student portfolios?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion3" id="f7">
+                            <div class="card-body">
+                                <p>
+                                    Yes, we love working with students! Whether it’s a personal site, project showcase, or resume booster — we make sure it screams *hire me*.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f8" data-toggle="collapse">
+                                    Do you help with LinkedIn and portfolio writing?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion3" id="f8">
+                            <div class="card-body">
+                                <p>
+                                    Yep. We craft keyword-rich, recruiter-friendly content for LinkedIn bios, about sections, and full portfolios. It’s more than just words — it’s strategy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 9 -->
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <div href="#f9" data-toggle="collapse">
+                                    What makes SPYDX different?
+                                </div>
+                            </h5>
+                        </div>
+                        <div class="collapse" data-parent="#accordion3" id="f9">
+                            <div class="card-body">
+                                <p>
+                                    We’re not an agency. We’re a movement. Young, skilled, and rooted in real tech — not just design fluff. We speak dev, data, and design — all in one flow.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services FAQ Section End -->
+<!-- Footer Section Start -->
+<footer id="footer" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-3 text-success">spydX</h2>
+        <p class="lead">Innovating your future with AI-powered solutions.</p>
+        
+        <!-- Social Media Links -->
+        <div class="d-flex justify-content-center my-4">
+            <a href="https://www.facebook.com/profile.php?id=61578774855523" class="text-light px-3 fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/107144620" class="text-light px-3 fs-4"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/spydX_" class="text-light px-3 fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/spydx_tech/" class="text-light px-3 fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/santhosh-G-07" class="text-light px-3 fs-4"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mb-3">
+            <a href="{% url 'index' %}" class="text-light text-decoration-none mx-2">Home</a> |
+            <a href="{% url 'about' %}" class="text-light text-decoration-none mx-2">About</a> |
+            <a href="{% url 'projects' %}" class="text-light text-decoration-none mx-2">Projects</a> |
+            <a href="{% url 'contact' %}" class="text-light text-decoration-none mx-2">Contact</a>
+        </div>
+
+        <!-- Footer Note -->
+        <p class="small text-muted mb-0">© 2025 <span class="text-success">thespydx.com</span> — All rights reserved.</p>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="{% static 'js/jquery-slim.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit-icons.min.js' %}"></script>
+</body>
+</html>

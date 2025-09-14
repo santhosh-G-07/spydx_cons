@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>spydX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/uikit.min.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome/css/all.css' %}">
+</head>
+<body>
+<!-- Navbar Section Start -->
+<nav class="navbar navbar-dark navbar-expand-lg" 
+     uk-sticky="top:100; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up">
+    <div class="container">
+        <a href="{% url 'index' %}" class="navbar-brand">
+            <img src="{% static 'img/logo1.png' %}" 
+                 class="img-fluid p-0" 
+                 style="width: 35%; filter: brightness(0) invert(1);">
+            <div class="ml-2 p-0 d-inline webT">spydX</div>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" 
+                data-toggle="collapse" data-target="#navBar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar Section End -->
+
+<!-- Contact Form Start -->
+<form action="https://formsubmit.co/contact@thespydx.com" method="POST" class="container mt-5">
+
+    <!-- FormSubmit settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+    <h3 class="text-center mb-4">Connect With SpydX</h3>
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="text" name="first_name" placeholder="First Name" required 
+                   class="form-control form-control-lg">
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" name="last_name" placeholder="Last Name" required 
+                   class="form-control form-control-lg">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <input type="email" name="email" placeholder="Email" required 
+                   class="form-control form-control-lg">
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" name="phone" placeholder="Phone Number" required 
+                   class="form-control form-control-lg">
+        </div>
+    </div>
+
+    <div class="form-group mb-4">
+        <textarea name="message" rows="4" placeholder="Tell us about your idea or inquiry..." 
+                  required class="form-control form-control-lg"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-dark btn-block btn-lg">Send Message</button>
+</form>
+<!-- Contact Form End -->
+
+
+
+<!-- Footer Section Start -->
+<footer id="footer" class="py-5 bg-dark text-light">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-3 text-success">spydX</h2>
+        <p class="lead">Innovating your future with AI-powered solutions.</p>
+        
+        <!-- Social Media Links -->
+        <div class="d-flex justify-content-center my-4">
+            <a href="https://www.facebook.com/profile.php?id=61578774855523" class="text-light px-3 fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/107144620" class="text-light px-3 fs-4"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/spydX_" class="text-light px-3 fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/spydx_tech/" class="text-light px-3 fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/santhosh-G-07" class="text-light px-3 fs-4"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="mb-3">
+            <a href="{% url 'index' %}" class="text-light text-decoration-none mx-2">Home</a> |
+            <a href="{% url 'about' %}" class="text-light text-decoration-none mx-2">About</a> |
+            <a href="{% url 'services' %}" class="text-light text-decoration-none mx-2">Services</a> |
+            <a href="{% url 'projects' %}" class="text-light text-decoration-none mx-2">Projects</a>
+        </div>
+
+        <!-- Footer Note -->
+        <p class="small text-muted mb-0">© 2025 <span class="text-success">thespydx.com</span> — All rights reserved.</p>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="{% static 'js/jquery-slim.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/uikit-icons.min.js' %}"></script>
+</body>
+</html>

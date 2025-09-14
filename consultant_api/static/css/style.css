@@ -1,0 +1,122 @@
+/* Custom styles for Pool Consultant Management System */
+body {
+  background: #f8fafc;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-animate {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.navbar-brand span {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+.btn-lg {
+  min-width: 200px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .btn-lg {
+    min-width: 100%;
+  }
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.progress-step .fa {
+  font-size: 1.2rem;
+}
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+}
+.hero-section {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  min-height: 60vh;
+  animation: heroFadeIn 1.2s ease;
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-img {
+  border: 5px solid #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.bg-gradient-primary {
+  background: linear-gradient(120deg, #007cf0 0%, #00dfd8 100%) !important;
+}
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: all 0.2s;
+}
+.btn-primary, .btn-secondary {
+  transition: background 0.1s, color 0.1s, box-shadow 0.2s, transform 0.2s;
+}
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 24px rgba(40,101,122,0.15);
+}
+footer {
+  background: #f8fafc;
+}
+.navbar-nav.gap-4 .nav-link {
+  font-size: 1.1rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+/* Remove navFadeIn animation and only keep hover underline effect */
+.nav-animate {
+  position: relative;
+  opacity: 1;
+  transition: color 0.2s;
+  color: #8e44ad !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-animate::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00c3ff, #ff61a6);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.nav-animate:hover::after {
+  width: 100%;
+}
+.nav-animate:hover {
+  color: #ff61a6 !important;
+}
+.custom-welcome-color {
+  color: #28657a;
+}
+.footer-social {
+  margin-top: 0.5rem;
+}
+.footer-social a {
+  color: #8e44ad;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #ff61a6;
+}
+html {
+  scroll-behavior: smooth;
+}

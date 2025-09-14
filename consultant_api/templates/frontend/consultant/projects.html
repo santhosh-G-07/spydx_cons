@@ -1,0 +1,46 @@
+{% extends "frontend/base.html" %}
+{% load humanize %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>My Projects</h2>
+    <a href="{% url 'consultant_project_add' %}" class="btn btn-success">
+      <i class="bi bi-plus-circle"></i> Add New Project
+    </a>
+  </div>
+
+  {% if projects %}
+    <div class="list-group">
+      {% for project in projects %}
+        <div class="list-group-item mb-3 shadow-sm rounded">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <h5 class="mb-0">{{ project.name }}</h5>
+            <small class="text-muted">
+              {% if project.start_date %}
+                {{ project.start_date|date:"M d, Y" }}
+              {% else %}
+                N/A
+              {% endif %}
+              &ndash;
+              {% if project.end_date %}
+                {{ project.end_date|date:"M d, Y" }}
+              {% else %}
+                Present
+              {% endif %}
+            </small>
+          </div>
+          {% if project.description %}
+            <p class="mb-1">{{ project.description|linebreaksbr }}</p>
+          {% else %}
+            <p class="text-muted fst-italic">No description provided.</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-muted fst-italic">No projects found. You can add projects manually.</p>
+  {% endif %}
+</div>
+{% endblock %}
